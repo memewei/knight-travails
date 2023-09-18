@@ -1,3 +1,5 @@
+import dataCell from "./get-data-cell";
+
 const Board = {
   startingX: null,
   startingY: null,
@@ -61,7 +63,7 @@ const Board = {
     path.unshift([this.startingX, this.startingY]);
 
     this.getStartingPoint(
-      getDataCell(path[path.length - 1][0], path[path.length - 1][1]),
+      dataCell(path[path.length - 1][0], path[path.length - 1][1]),
     );
     return path;
   },

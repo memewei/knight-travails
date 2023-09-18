@@ -1,0 +1,18 @@
+import Board from "./board-logic";
+import dataCell from "./get-data-cell";
+import removeKnight from "./remove-knight";
+import createKnight from "./create-knight";
+
+const randomlyPlaceKnight = (
+  x = Math.floor(Math.random() * 8),
+  y = Math.floor(Math.random() * 8),
+) => {
+  removeKnight();
+  let randomCell = dataCell(x, y);
+  randomCell.appendChild(createKnight());
+  randomCell.style.backgroundColor = "rgb(0, 91, 0)";
+  Board.getStartingPoint(randomCell);
+  Board.getPossibleMoves(Board.startingX, Board.startingY);
+};
+
+export default randomlyPlaceKnight;
