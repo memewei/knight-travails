@@ -1,3 +1,5 @@
+import createKnight from "./create-knight";
+
 const knight = document.querySelector(".knight");
 
 let appendNewKnight = (newCell) => {

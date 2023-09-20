@@ -2,7 +2,6 @@ import Board from "./board-logic";
 import dataCell from "./get-data-cell";
 import appendNewKnight from "./append-new-knight";
 
-let boardCells = document.querySelectorAll(".cell");
 let knight = document.querySelector(".knight");
 
 let animatePath = (path) => {
@@ -28,7 +27,7 @@ let animatePath = (path) => {
   };
 
   for (let i = 0; i < path.length - 1; i++) {
-    console.log(`Path: ${path[i + 1][0]}, ${path[i + 1][1]}`);
+    console.log("Path :", path[i + 1][0], path[i + 1][1]);
     let animateY =
       path[i][0] > path[i + 1][0]
         ? (path[i][0] - path[i + 1][0]) * 100

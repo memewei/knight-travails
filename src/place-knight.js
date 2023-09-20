@@ -1,8 +1,7 @@
 import userPlaceKnight from "./user-placed-knight";
 
-let boardCells = document.querySelectorAll(".cell");
-
 let placeKnight = () => {
+  let boardCells = document.querySelectorAll(".cell");
   boardCells.forEach((cell) => {
     cell.addEventListener("click", userPlaceKnight);
   });

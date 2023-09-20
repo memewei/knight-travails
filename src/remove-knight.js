@@ -4,6 +4,7 @@ let boardCells = document.querySelectorAll(".cell");
 const knight = document.querySelector(".knight");
 
 const removeKnight = () => {
+  console.log("removeKnight triggered");
   Board.resetBoard();
   boardCells.forEach((cell) => {
     if (cell.style.backgroundColor === "rgb(0, 91, 0)") {

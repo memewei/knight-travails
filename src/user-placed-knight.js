@@ -7,6 +7,7 @@ let boardCells = document.querySelectorAll(".cell");
 
 let userPlaceKnight = (e) => {
   removeKnight();
+  console.log("userPlaceKnight");
   let parent = dataCell(e.target.dataset.x, e.target.dataset.y);
   parent.appendChild(createKnight());
   parent.style.backgroundColor = "rgb(0, 91, 0)";

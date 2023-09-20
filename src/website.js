@@ -13,23 +13,24 @@ const randomlyPlaceBtn = document.querySelector(".randomly-place-btn");
 const selectEndingBtn = document.querySelector(".select-ending-btn");
 const startBtn = document.querySelector(".start-btn");
 
+let handleRandom = () => {
+  removeKnight();
+  randomlyPlaceKnight();
+};
+
+let knightTravails = () => {
+  animatePath(Board.findPath());
+  Board.chainReset();
+};
+
 function initialize() {
-  let handleRandom = () => {
-    removeKnight();
-    randomlyPlaceKnight();
-  };
-
-  let knightTravails = () => {
-    animatePath(Board.findPath());
-    Board.chainReset();
-  };
-
+  generateBoard();
   clearBoardBtn.addEventListener("click", clearBoard);
   placeKnightBtn.addEventListener("click", placeKnight);
   randomlyPlaceBtn.addEventListener("click", handleRandom);
   selectEndingBtn.addEventListener("click", selectEndingCell);
   startBtn.addEventListener("click", knightTravails);
-  generateBoard();
+  console.log("initialized");
 }
 
 export default initialize;
