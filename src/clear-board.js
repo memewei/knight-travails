@@ -7,9 +7,9 @@ let clearBoard = () => {
   removeKnight();
   Board.resetBoard();
   boardCells.forEach((cell) => {
-    cell.classList.contains("white")
-      ? (cell.style.backgroundColor = "white")
-      : (cell.style.backgroundColor = "black");
+    cell.classList.contains("lilac")
+      ? (cell.style.backgroundColor = "rgb(193, 182, 217)")
+      : (cell.style.backgroundColor = "rgb(81, 17, 67)");
   });
 };
 

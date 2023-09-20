@@ -6,7 +6,7 @@ let handleClick = (e) => {
   if (Board.checkValidEnd(e.target)) {
     Board.getEndingPoint(e.target);
     let endCell = dataCell(e.target.dataset.x, e.target.dataset.y);
-    endCell.style.backgroundColor = "rgb(0, 91, 0)";
+    endCell.style.backgroundColor = "rgb(180, 224, 180)";
     boardCells.forEach((cell) => {
       cell.removeEventListener("click", handleClick);
     });

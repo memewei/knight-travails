@@ -8,9 +8,9 @@ const removeKnight = () => {
   boardCells.forEach((cell) => {
     if (cell.style.backgroundColor === "rgb(0, 91, 0)") {
       cell.textContent = "";
-      cell.dataset.originalColor === "white"
+      cell.dataset.originalColor === "lilac"
         ? (cell.style.backgroundColor = cell.dataset.originalColor)
-        : (cell.style.backgroundColor = "black");
+        : (cell.style.backgroundColor = "rgb(81, 17, 67)");
     }
     if (cell.hasChildNodes()) cell.removeChild(knight);
   });

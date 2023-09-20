@@ -7,9 +7,13 @@ const generateBoard = (board = Board.generate()) => {
     for (let y = 0; y < board[x].length; y++) {
       let cell = document.createElement("div");
       if (x % 2 === 0)
-        y % 2 === 0 ? cell.classList.add("white") : cell.classList.add("black");
+        y % 2 === 0
+          ? cell.classList.add("lilac")
+          : cell.classList.add("purple");
       else
-        y % 2 === 0 ? cell.classList.add("black") : cell.classList.add("white");
+        y % 2 === 0
+          ? cell.classList.add("purple")
+          : cell.classList.add("lilac");
 
       cell.dataset.originalColor = cell.classList;
       cell.classList.add("cell");

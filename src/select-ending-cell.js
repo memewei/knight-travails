@@ -6,9 +6,9 @@ let selectEndingCell = () => {
   boardCells.forEach((cell) => {
     if (cell.style.backgroundColor === "rgb(180, 224, 180)") {
       Board.resetEnd();
-      cell.classList.contains("white")
-        ? (cell.style.backgroundColor = "white")
-        : (cell.style.backgroundColor = "black");
+      cell.classList.contains("lilac")
+        ? (cell.style.backgroundColor = "lilac")
+        : (cell.style.backgroundColor = "purple");
     }
     cell.addEventListener("click", handleClick);
     console.log("selectEndingCell triggered");
