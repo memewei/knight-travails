@@ -2,9 +2,8 @@ import Board from "./board-logic";
 import dataCell from "./get-data-cell";
 import appendNewKnight from "./append-new-knight";
 
-let knight = document.querySelector(".knight");
-
 let animatePath = (path) => {
+  let knight = document.querySelector(".knight");
   if (Board.endingX === null || Board.startingX === null) return;
   let timeCount = 0;
   let totalX = 0;
