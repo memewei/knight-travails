@@ -7,23 +7,21 @@ import placeKnight from "./place-knight";
 import selectEndingCell from "./select-ending-cell";
 import Board from "./board-logic";
 
-const placeKnightBtn = document.querySelector(".place-knight-btn");
-const clearBoardBtn = document.querySelector(".clear-board-btn");
-const randomlyPlaceBtn = document.querySelector(".randomly-place-btn");
-const selectEndingBtn = document.querySelector(".select-ending-btn");
-const startBtn = document.querySelector(".start-btn");
-
-let handleRandom = () => {
-  removeKnight();
-  randomlyPlaceKnight();
-};
-
-let knightTravails = () => {
-  animatePath(Board.findPath());
-  Board.chainReset();
-};
-
 function initialize() {
+  const placeKnightBtn = document.querySelector(".place-knight-btn");
+  const clearBoardBtn = document.querySelector(".clear-board-btn");
+  const randomlyPlaceBtn = document.querySelector(".randomly-place-btn");
+  const selectEndingBtn = document.querySelector(".select-ending-btn");
+  const startBtn = document.querySelector(".start-btn");
+  let handleRandom = () => {
+    removeKnight();
+    randomlyPlaceKnight();
+  };
+
+  let knightTravails = () => {
+    animatePath(Board.findPath());
+    Board.chainReset();
+  };
   generateBoard();
   clearBoardBtn.addEventListener("click", clearBoard);
   placeKnightBtn.addEventListener("click", placeKnight);

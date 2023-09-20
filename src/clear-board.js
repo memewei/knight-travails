@@ -1,9 +1,8 @@
 import Board from "./board-logic";
 import removeKnight from "./remove-knight";
 
-let boardCells = document.querySelectorAll(".cell");
-
 let clearBoard = () => {
+  let boardCells = document.querySelectorAll(".cell");
   console.log("clearBoard triggered");
   removeKnight();
   Board.resetBoard();

@@ -1,9 +1,8 @@
 import Board from "./board-logic";
 import dataCell from "./get-data-cell";
 
-let boardCells = document.querySelectorAll(".cell");
-
 let handleClick = (e) => {
+  let boardCells = document.querySelectorAll(".cell");
   if (Board.checkValidEnd(e.target)) {
     Board.getEndingPoint(e.target);
     let endCell = dataCell(e.target.dataset.x, e.target.dataset.y);

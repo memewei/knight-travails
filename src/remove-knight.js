@@ -1,9 +1,8 @@
 import Board from "./board-logic";
 
-let boardCells = document.querySelectorAll(".cell");
-const knight = document.querySelector(".knight");
-
 const removeKnight = () => {
+  let boardCells = document.querySelectorAll(".cell");
+  const knight = document.querySelector(".knight");
   console.log("removeKnight triggered");
   Board.resetBoard();
   boardCells.forEach((cell) => {
