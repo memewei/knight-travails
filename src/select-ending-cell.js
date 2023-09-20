@@ -1,9 +1,8 @@
 import Board from "./board-logic";
 import handleClick from "./handle-click";
 
-let boardCells = document.querySelectorAll(".cell");
-
 let selectEndingCell = () => {
+  let boardCells = document.querySelectorAll(".cell");
   boardCells.forEach((cell) => {
     if (cell.style.backgroundColor === "rgb(180, 224, 180)") {
       Board.resetEnd();
