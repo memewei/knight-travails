@@ -29,16 +29,16 @@ let animatePath = (path) => {
     console.log("Path :", path[i + 1][0], path[i + 1][1]);
     let animateY =
       path[i][0] > path[i + 1][0]
-        ? (path[i][0] - path[i + 1][0]) * 100
-        : -Math.abs((path[i + 1][0] - path[i][0]) * 100);
+        ? -(path[i][0] - path[i + 1][0]) * 90
+        : Math.abs((path[i + 1][0] - path[i][0]) * 90);
     totalX += animateY;
     animate(timeCount, totalX, totalY);
     timeCount += 301;
 
     let animateX =
       path[i][1] > path[i + 1][1]
-        ? -Math.abs((path[i][1] - path[i + 1][1]) * 100)
-        : (path[i + 1][1] - path[i][1]) * 100;
+        ? -Math.abs((path[i][1] - path[i + 1][1]) * 90)
+        : (path[i + 1][1] - path[i][1]) * 90;
     totalY += animateX;
     newCell = dataCell(path[i + 1][0], path[i + 1][1]);
     animate(timeCount, totalX, totalY, newCell, i);
